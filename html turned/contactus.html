@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WMS Management system</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+	
+</head>
+<body >
+	<style type="text/css">
+		h1{
+			text-align: center;
+			margin-top: 5%;
+		}
+		.welcome{
+			
+			font-size: 5vw;
+			color: rgb(19, 16, 16);
+		}
+		.to_your{
+			font-size: 5vw;
+			color: white;
+		}
+		.Warehouse{
+			color: white;
+			font-size: 4vw;
+		}
+		.butn{
+			text-align: center;
+			margin: 5px;
+
+		}
+		.body{
+			background-image: url() ;
+			background-size: cover;
+
+
+		}
+		.nav_link{
+			float: right;
+			font-size: 15px;
+			padding: 10px;
+			color: black;
+			text-decoration: none;
+			z-index: 1;
+		}
+		.nav{
+			background-color: white;
+		}
+		.logo{
+			padding: 10px;
+		}
+		a:hover{
+			color: black;
+		font-size: 20px;
+		}
+		#myCarousel{
+			position: ;
+			height: 500px;
+		}
+		.hero{
+			background-color:white;
+			padding: 10px;
+
+		}
+		.hero_2{
+    		font-size: 36px;
+    		font-family: "Poppins", sans-serif;
+   			 font-weight: 800;
+    		color: #404040;
+    		line-height: 46px;
+    		margin-top: 30px;
+    		text-transform: capitalize;
+}
+		}
+		.hero_2_item{
+			font-size: 30px;
+    		line-height: 28px;
+    		font-family: "Poppins", sans-serif;
+    		color: #666666;
+    		max-width: 670px;
+    		font-weight: 300;
+   		 	margin: auto;
+   			margin-top: 12px;
+   			text-align: center;
+		}
+
+	</style>
+</head>
+<body class="body" >
+
+	<div class="container-fluid" >
+		<div class="nav col-12">
+			<img src="images/WMS.jpg" class="logo col-2 " >
+			<div class="nav_link">
+				<a href="login.html" class="nav_link">login</a>
+				<a href="contactus.html" class="nav_link">Contact Us</a>
+				<a href="aboutus.html" class="nav_link">About Us</a>
+				<a href="#" class="nav_link">Services</a>
+	
+			</div>
+		</div>
+	<!--<div class="container-fluid">
+
+			<div class="topper">
+			<img src="images/WMS.jpg" class="img-responsive" id="pic">
+			
+			</div>-->
+
+  	<!--	<div class="nav col-12">
+  			<div class="dropdown animated pulse dropdown_button " >
+  				
+  				<button class="dropdown-toggle btn btn-default " data-toggle="dropdown">Manage <span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="useraccounts.html">User Accounts</a></li>
+						<li><a href="#">Manage User</a></li>
+						<li><a href="category.html">Category</a></li>
+						<li><a href="#">Store</a></li>
+						<li><a href="#">Item Creation</a></li>
+						
+						
+					</ul>
+			</div>
+
+			<div class="dropdown animated pulse dropdown_button animated bounce" style="float: left;">
+  				<button class="dropdown-toggle btn btn-default " data-toggle="dropdown">Stock <span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="add_item.html">Add Item</a></li>
+						<li><a href="#">Edit item</a></li>
+						
+						<li><a href="available_stock.html">Available Stock Item</a></li>
+						
+						
+						
+					</ul>
+			</div>
+
+			<div class="dropdown animated pulse dropdown_button animated bounce" >
+  				<button class="dropdown-toggle btn btn-default " data-toggle="dropdown">Transaction <span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Incomeing Stock</a></li>
+						<li><a href="#">Outgoing Stock</a></li>
+						
+						
+						
+					</ul>
+			</div>
+
+			<div class="dropdown animated pulse dropdown_button animated bounce" >
+  				<button class="dropdown-toggle btn btn-default " data-toggle="dropdown">Report <span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Stock Item Report</a></li>
+						
+						
+						
+					</ul>
+			</div>
+
+
+			<div class="dropdown animated pulse dropdown_button animated bounce" >
+  				<button class="dropdown-toggle btn btn-default " data-toggle="dropdown">Invoice <span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="invoice.html">Create Invoice</a></li>
+						<li><a href="#">Edit Invoice</a></li>
+						<li><a href="#">View Invoices</a></li>
+						
+						
+					</ul>
+			</div>
+
+			<div class="dropdown animated pulse dropdown_button animated bounce" >
+  				<button class="dropdown-toggle btn btn-default " data-toggle="dropdown">Tools <span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Help</a></li>
+						<li><a href="#">Calculator</a></li>
+						<li><a href="aboutus.html">About Us</a></li>
+						<li><a href="contactus.html">Contact Us</a></li>				
+					</ul>
+			</div>
+
+		</div>
+	</div>	
+</div>		
+-->
+	<div style="float: center;">
+		<center>
+			<h2>Dear esteemed customer: </h2><p>You can contact us via email. Kindly fill out the form below to reach us. Your input is highly regarded.
+		</p><br><br>
+		
+
+	<form class="add_item_field">
+		<label>Email/Phone:</label><br>
+		<input type="email" name="email" placeholder="Email or Phone"><br><br>
+		<label>Fax Number:</label><br>
+		<input type="text" name="fax" placeholder="fax"><br><br>
+		<label>Address:</label><br>
+		   <textarea cols="45" rows="5" placeholder="address"></textarea><br><br>
+		<label>Comments:</label><br>
+		   <textarea cols="45" rows="5" placeholder="your reply"></textarea><br><br>
+		
+
+		<a class="btn btn-success" href="#">Submit</a>
+		<a class="btn btn-default" href="welcome.html">Home</a>
+	</form>
+
+</center>
+	</div>
+
+
+
+ 
+
+
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js">
+	</script>	
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

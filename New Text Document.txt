@@ -1,0 +1,25 @@
+<table border="1px solid black" class="col-12" >
+	<tr>
+		<th  style="font-size:20px; padding: 10px; padding-right:20px; color:#1a0000;">item_name</th>
+		<th style="font-size:20px; padding: 10px; padding-right:20px; color:#1a0000;">quantity</th>
+		<th style="font-size:20px; padding: 10px; padding-right:20px; color:#1a0000;">Price</th>
+	</tr>
+	
+
+
+<?php
+
+while ($rs=mysqli_fetch_array($qry)) {
+	
+	
+
+	print "<tr>
+	
+	<td> <input  value=".$rs['item_name']." > </td>
+	<td> <input  value=".$rs['quantity']."> </td>
+	<td> <input  value=".$rs['price']." > </td>
+	</tr>";
+}
+
+?>
+</table>

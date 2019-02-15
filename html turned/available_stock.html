@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Available stock</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		table{
+			border: 1px solid blue;
+			padding: 5px;
+		}
+	</style>
+	
+
+	
+</head>
+<body >
+	
+	<div class="container-fluid">
+
+			<div class="topper">
+			<img src="images/WMS.jpg" class="img-responsive" id="pic">
+			
+			</div>
+
+  		<div class="nav col-sm-12 col-lg-12 col-md-12 col-xs-12">
+  			<div class="dropdown animated pulse dropdown_button " >
+  				
+  				<button class="dropdown-toggle btn btn-default  " data-toggle="dropdown">Manage <span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="#">User Accounts</a></li>
+						<li><a href="#">Manage User</a></li>
+						<li><a href="#">Add User</a></li>
+						
+						
+						
+						
+					</ul>
+			</div>
+
+			<div class="dropdown animated pulse dropdown_button animated bounce" style="float: left;">
+  				<button class="dropdown-toggle btn btn-default " data-toggle="dropdown">Stock <span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="add_item.html">Add Item</a></li>
+						
+						
+						<li><a href="#">Available Stock Item</a></li>
+						
+						
+						
+					</ul>
+			</div>
+			
+			<div class="dropdown animated pulse dropdown_button animated bounce" >
+  				<button class="dropdown-toggle btn btn-default " data-toggle="dropdown">Transaction <span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Incomeing Stock</a></li>
+						<li><a href="#">Outgoing Stock</a></li>
+						
+						
+						
+					</ul>
+			</div>
+
+			<div class="dropdown animated pulse dropdown_button animated bounce" >
+  				<button class="dropdown-toggle btn btn-default " data-toggle="dropdown">Report <span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Sotck Item Report</a></li>
+						
+						
+						
+					</ul>
+			</div>
+
+
+			<div class="dropdown animated pulse dropdown_button animated bounce" >
+  				<button class="dropdown-toggle btn btn-default " data-toggle="dropdown">Invoice <span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Create Invoice</a></li>
+						<li><a href="#">Edit Invoice</a></li>
+						<li><a href="#">View Invoices</a></li>
+						
+						
+					</ul>
+			</div>
+
+		
+			<div class="dropdown animated pulse dropdown_button animated bounce" >
+  				<button class="dropdown-toggle btn btn-default " data-toggle="dropdown">Tools <span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Help</a></li>
+						<li><a href="#">Calculator</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contact Us</a></li>
+
+						
+						
+					</ul>
+			</div>
+
+		</div>
+
+			
+		
+		
+		<div class="available_stock_field">
+				<?php
+
+$server='localhost';
+$user = 'root';
+$password = '';
+$database = 'wms';
+
+$conn = mysqli_connect($server, $user, $password, $database);
+$str = "select item_name, quantity, price from add_item";
+
+$qry = mysqli_query($conn, $str);
+
+?>
+<table border="0px solid black"  >
+	<tr>
+		<th>item_name</th>
+		<th>quantity</th>
+		<th>Price</th>
+	</tr>
+	
+
+
+<?php
+
+while ($rs=mysqli_fetch_array($qry)) {
+	
+	
+	print "<tr>
+	<td> <input type="text" value=".$rs['item_name'].></td>
+	<td> ".$rs['quantity']."</td>
+	<td> ".$rs['price']."</td>
+	</tr>";
+}
+
+?>
+</table>
+	
+
+		</div>
+	
+	  
+	
+	</div>
+
+
+
+
+ 
+
+
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js">
+	</script>	
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
